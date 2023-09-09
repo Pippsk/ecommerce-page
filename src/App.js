@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Styles/reset.scss";
+import Carrousel from "./components/Carrousel/Carrousel";
+import Header from "./components/Header/Header";
+import Description from "./components/Description/Description";
+
+import { AppContext } from "./Contexts/AppContext";
+import LightBox from "./components/LightBox/LightBox";
+import ImageModal from "./components/Modal/ImageModal";
 
 function App() {
+  const [mobileList, setMobileList] = useState(false);
+  const [quantity, setQuantity] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider
+      value={{
+        mobileList,
+        setMobileList,
+        quantity,
+        setQuantity,
+        showModal,
+        setShowModal,
+      }}
+    >
+      <Header />
+      <Carrousel />
+      <div className="main">
+        <LightBox />
+
+        <Description />
+      </div>
+      {showModal && <ImageModal />}
+    </AppContext.Provider>
   );
 }
 

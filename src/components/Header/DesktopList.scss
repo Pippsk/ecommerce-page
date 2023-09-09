@@ -1,0 +1,19 @@
+.desktop_list{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 1rem;
+    
+
+    a{
+        text-decoration: none;
+        color: hsl(219, 9%, 45%);
+        font-size: 12px;
+    }
+}
+
+@media(max-width:768px){
+    .desktop_list{
+        display: none;
+    }
+}

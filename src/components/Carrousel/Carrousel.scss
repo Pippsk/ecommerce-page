@@ -1,0 +1,13 @@
+.carousel_container{
+    width: 100%;
+
+    img{
+        width: 100%;
+    }
+}
+
+@media(min-width:768px){
+    .carousel_container{
+        display: none;
+    }
+}

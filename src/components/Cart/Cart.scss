@@ -1,0 +1,82 @@
+.cart_container{
+    background-color:white;
+    width: 95%;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.empty_cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p{
+        margin: 5rem 4rem;
+    }
+}
+
+.cart_description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    p{
+        margin: 0;
+        span{
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    }
+
+    img{
+        width: 50px;
+        border-radius: 5px;
+    }
+
+    .trash{
+        width: 15px;
+        cursor: pointer;
+    }
+}
+
+.checkout_btn{
+    width: 100%;
+    padding: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: bold;
+}
+
+@media(min-width:768px){
+    .cart_container{
+        width: 300px;
+        left: 80%;
+        box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.178)
+        ;
+    }
+
+    h2{
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .cart_description{
+
+        img{
+            width: 40px;
+        }
+
+        p{
+            font-size: 12px;
+        }
+    }
+}

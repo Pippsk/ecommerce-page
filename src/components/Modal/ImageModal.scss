@@ -1,0 +1,31 @@
+.image_modal_container{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    min-height: 100vh;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.737);
+}
+
+.close_sign_container{
+    width: 391px;
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.modal_wrapper{
+    position: fixed;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    padding: 14rem;
+    
+}
+
+

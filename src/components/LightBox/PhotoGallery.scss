@@ -1,0 +1,23 @@
+.gallery_container{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.gallery_thumbnail_container{
+    width: 25%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+    &:hover{
+        
+        border: 3px solid hsl(26, 100%, 55%) ;
+    }
+    img{
+        width: 100%;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+}
